@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Convert Image names to JSON (WAStickerApp)</title>
+
+		<script>
+
+			document.getElementById('files').addEventListener('change', function(e) {
+			  jsonObj = [];
+			  //var list = document.getElementById('filelist');
+			  //list.innerHTML = '';
+			  if (this.files.length>30){
+				 alert("You can only upload a maximum of 30 files");
+			  } else {
+			    for (var i = 0; i < this.files.length; i++) {
+			      //list.innerHTML += (i + 1) + '. ' + this.files[i].name + '\n';
+			      item = {}
+			      item ["image_file"] = this.files[i].name;
+			      item ["emoji"] = [];
+
+			      item ["emoji"].push("");
+			      item ["emoji"].push("");
+
+			      jsonObj.push(item);
+
+			    }
+			  
+			  	//document.getElementById('json').append(JSON.stringify(jsonObj, null, 2));
+			  
+					output(syntaxHighlight(JSON.stringify(jsonObj, undefined, 2)));
+				
+			  	//if (list.innerHTML == '') list.style.display = 'none';
+			  	//else list.style.display = 'block';
+			  }
+			});
+
+			function syntaxHighlight(json) {
+			    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+			    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+				var cls = 'number';
+				if (/^"/.test(match)) {
+				    if (/:$/.test(match)) {
+					cls = 'key';
+				    } else {
+					cls = 'string';
+				    }
+				} else if (/true|false/.test(match)) {
+				    cls = 'boolean';
+				} else if (/null/.test(match)) {
+				    cls = 'null';
+				}
+				return '<span class="' + cls + '">' + match + '</span>';
+			    });
+			}
+
+			function output(inp) {
+			    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
+			}
+
+		</script>
+
+		<style>
+		pre { outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+			.string { color: green; }
+			.number { color: darkorange; }
+			.boolean { color: blue; }
+			.null { color: magenta; }
+			.key { color: red; }
+
+		</style>
+
+	</head>
+	<body>
+		<input type="file" id="files" multiple accept=".webp" />
+		<br>
+		<br>
+		<br>
+		<div id="json"></div>
+	</body>
+</html>
