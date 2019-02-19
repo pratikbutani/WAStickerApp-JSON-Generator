@@ -35,8 +35,6 @@ That will allows you to:
 ]
 ```
 
-I will try to add more functionality like developer can input publisher name, email, Android/iOS link etc...
-
 Hope it will helps.
 
 Thank you.
