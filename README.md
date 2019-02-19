@@ -1,5 +1,4 @@
 # WAStickerApp-JSON-Generator
-Select image files from folder and get your JSON ready. Create Now : http://pratikbutani.com/wastickerapp/
 
 I have created script that will give you JSON of selected files.
 
