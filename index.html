@@ -1,7 +1,30 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<title>Convert Image names to JSON (WAStickerApp)</title>
 
+		
+
+		<style>
+		pre { outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+			.string { color: green; }
+			.number { color: darkorange; }
+			.boolean { color: blue; }
+			.null { color: magenta; }
+			.key { color: red; }
+
+		</style>
+
+	</head>
+	<body>
+		<input type="file" id="files" multiple accept=".webp" />
+		<br>
+		<br>
+		<br>
+		<div id="json"></div>
+	
+	
 		<script>
 
 			document.getElementById('files').addEventListener('change', function(e) {
@@ -57,23 +80,8 @@
 			}
 
 		</script>
-
-		<style>
-		pre { outline: 1px solid #ccc; padding: 5px; margin: 5px; }
-			.string { color: green; }
-			.number { color: darkorange; }
-			.boolean { color: blue; }
-			.null { color: magenta; }
-			.key { color: red; }
-
-		</style>
-
-	</head>
-	<body>
-		<input type="file" id="files" multiple accept=".webp" />
-		<br>
-		<br>
-		<br>
-		<div id="json"></div>
+	
 	</body>
+	
+	
 </html>
