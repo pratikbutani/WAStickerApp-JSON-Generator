@@ -18,47 +18,108 @@
 
 	</head>
 	<body>
-		<input type="file" id="files" multiple accept=".webp" />
+		<table>
+
+			<tr>
+				<td>Donate If you Love it &hearts; &hearts; &hearts; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+				<td>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="46Q5USNZNGKML">
+						<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+					</form>
+				</td>
+			<tr>	<td>&nbsp</td> </tr>
+			</tr>
+		</table>
+		<h2>Enter details and Get your Sticker Pack JSON Ready &#128515 &#128515 &#128515</h2>
+		<h5>(Your JSON will be display when you choose files.)</h5>
+		<table>
+			<tr>
+				<td> Enter Folder Name (Identifier) : </td>
+				<td> <input type="text" id="identifier" /> </td>
+			</tr>
+			<tr>
+				<td> Enter Sticker Pack Name : </td>
+				<td> <input type="text" id="name" />	</td>
+			</tr>
+			<tr>
+				<td> Enter Publisher : </td>
+				<td> <input type="text" id="publisher" /> </td>
+			</tr>
+			<tr>
+				<td> Enter Tray Image (with .png) : </td>
+				<td> <input type="text"  id="tray_image_file" /> </td>
+			</tr>
+			<tr>
+				<td> Enter Publisher Email : </td>
+				<td> <input type="text" id="publisher_email" /> </td>
+			</tr>
+			<tr>
+				<td> Enter Publisher Website : </td>
+				<td> <input type="text" id="publisher_website" /> </td>
+			</tr>
+			<tr>
+				<td> Enter Privacy Policy URL : </td>
+				<td> <input type="text" id="privacy_policy_website" /> </td>
+			</tr>
+			<tr>
+				<td> Enter Licence Agreement Website : </td>
+				<td> <input type="text" id="license_agreement_website" /> </td>
+			</tr>
+			<tr>
+				<td> Select Images (Only .webp) : </td>
+				<td> <input type="file" id="files" multiple accept=".webp" /> </td>
+			</tr>
+		</table>	
 		<br>
 		<br>
-		<br>
-		<div id="json"></div>
-	
 	
 		<script>
 
 			document.getElementById('files').addEventListener('change', function(e) {
-			  jsonObj = [];
-			  //var list = document.getElementById('filelist');
-			  //list.innerHTML = '';
-			  if (this.files.length>30){
-				 alert("You can only upload a maximum of 30 files");
-			  } else {
-			    for (var i = 0; i < this.files.length; i++) {
-			      //list.innerHTML += (i + 1) + '. ' + this.files[i].name + '\n';
-			      item = {}
-			      item ["image_file"] = this.files[i].name;
-			      item ["emoji"] = [];
-
-			      item ["emoji"].push("");
-			      item ["emoji"].push("");
-
-			      jsonObj.push(item);
-
-			    }
-			  
-			  	//document.getElementById('json').append(JSON.stringify(jsonObj, null, 2));
-			  
-					output(syntaxHighlight(JSON.stringify(jsonObj, undefined, 2)));
+				jsonObj = [];
+				mainArray = {};
+				mainArray.android_play_store_link = "";
+				mainArray.ios_app_store_link = "";
 				
-			  	//if (list.innerHTML == '') list.style.display = 'none';
-			  	//else list.style.display = 'block';
-			  }
+				if (this.files.length>30){
+					 alert("You can only upload a maximum of 30 files");
+				} else {
+				    	for (var i = 0; i < this.files.length; i++) {
+					      	item = {};
+					      	item ["image_file"] = this.files[i].name;
+					      	item ["emoji"] = [];
+		
+					      	item ["emoji"].push("");
+					      	item ["emoji"].push("");
+		
+						jsonObj.push(item);
+	
+				   	}
+					mainArray["sticker_pack"] = [];
+					innerValue = {};
+					innerValue["identifier"] = document.getElementById('identifier').value;
+					innerValue["name"] = document.getElementById('name').value;
+					innerValue["publisher"] = document.getElementById('publisher').value;
+					innerValue["tray_image_file"] = document.getElementById('tray_image_file').value;
+					innerValue["publisher_email"] = document.getElementById('publisher_email').value;
+					innerValue["publisher_website"] = document.getElementById('publisher_website').value;
+					innerValue["privacy_policy_website"] = document.getElementById('privacy_policy_website').value;
+					innerValue["license_agreement_website"] = document.getElementById('license_agreement_website').value;
+					innerValue["stickers"] = [];
+					innerValue["stickers"].push(jsonObj);
+					mainArray["sticker_pack"].push(innerValue);
+					
+					
+					output(syntaxHighlight(JSON.stringify(mainArray, undefined, 4)));
+				}
 			});
 
 			function syntaxHighlight(json) {
-			    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-			    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+			    	json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+				return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
 				var cls = 'number';
 				if (/^"/.test(match)) {
 				    if (/:$/.test(match)) {
@@ -80,8 +141,5 @@
 			}
 
 		</script>
-	
-	</body>
-	
-	
+	</body>	
 </html>
