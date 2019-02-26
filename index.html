@@ -124,6 +124,10 @@
 				<div class="btn" id="copyButtonClick" onclick="copyJSON()">
 					<span>Copy JSON</span>
 				</div>
+				&nbsp
+				<div class="btn" id="copyButtonClick" onclick="clearJSON()">
+					<span>Clear JSON</span>
+				</div>
 			<pre id='output'></pre>
 			<div class="progress">
 				<div>
@@ -207,18 +211,21 @@
 	
 	function copyJSON() {
 		const copyText = document.getElementById("output").textContent;
-		const textArea = document.createElement('textarea');
-		textArea.textContent = copyText;
-		document.body.append(textArea);
-		textArea.select();
-		document.execCommand("copy");
-		M.toast({html: 'JSON Copied Successfully. Enjoy!'})	
+		if(copyText) {
+			const textArea = document.createElement('textarea');
+			textArea.textContent = copyText;
+			document.body.append(textArea);
+			textArea.select();
+			document.execCommand("copy");
+			M.toast({html: 'JSON Copied Successfully. Enjoy!'});
+		} else {
+			M.toast({html: 'You can not copy empty JSON'});
+		}
 	}
-
-	//document.getElementById('files').addEventListener('change', makeJSON());
-	//document.getElementById('identifier').addEventListener('onkeyup', makeJSON());
-	//document.getElementById('license_agreement_website').addEventListener('onkeyup', makeJSON());
 	
+	function clearJSON() {
+		document.getElementById("output").textContent = "";
+	}
 </script>
 
 <!-- Place this tag in your head or just before your close body tag. -->
