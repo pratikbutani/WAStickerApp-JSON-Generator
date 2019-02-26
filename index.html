@@ -1,145 +1,227 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="description" content="WhatsApp Sticker Pack JSON Generator | Create JSON for WhatsApp Sticker Pack | Select Images and Get Your JSON for WhatsApp Sticker Pack READY!!" />
 		<title>Convert Image names to JSON (WAStickerApp)</title>
-
-		
-
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<style>
-		pre { outline: 1px solid #ccc; padding: 5px; margin: 5px; }
-			.string { color: green; }
-			.number { color: darkorange; }
-			.boolean { color: blue; }
-			.null { color: magenta; }
-			.key { color: red; }
-
+		body {
+			background-image: linear-gradient(#eb3349, #f45c43);
+			height: 100%;
+			background-size: cover;
+			font-family: 'Nunito', sans-serif;
+		}
+		.progress {
+			margin: 1.5rem 0;
+		}
+		pre {
+			padding: 25px;
+			background-color: #F1F3F4;
+			border: none;
+			border-radius: 22px;
+			box-shadow: none;
+			outline: none;
+			opacity: 1;
+			transition: background-color 300ms ease-in-out;
+			transition: opacity 200ms; 
+			}		.string { color: green; }
+					.number { color: darkorange; }
+					.boolean { color: blue; }
+					.null { color: magenta; }
+					.key { color: red; }
+					
+		textarea {
+			position: absolute;
+			left: -100%;
+		}
 		</style>
-
 	</head>
 	<body>
-		<table>
-
-			<tr>
-				<td>Donate If you Love it &hearts; &hearts; &hearts; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
-				<td>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="46Q5USNZNGKML">
-						<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+		<div class="container">
+			<div class="card-panel">
+				<div class="row">
+					<div class="col">
+						<a class="github-button" href="https://github.com/pratikbutani" data-show-count="true" aria-label="Follow @pratikbutani on GitHub">Follow @pratikbutani</a>
+						<a class="github-button" href="https://github.com/pratikbutani/WAStickerApp-JSON-Generator/fork" data-show-count="true" aria-label="Fork pratikbutani/WAStickerApp-JSON-Generator on GitHub">Fork</a>
+						<a class="github-button" href="https://github.com/pratikbutani/WAStickerApp-JSON-Generator" data-show-count="true" aria-label="Star pratikbutani/WAStickerApp-JSON-Generator on GitHub">Star</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<h4 class="font-bold"> <b>Enter details and Get your JSON Ready for WhatsApp Sticker Pack &#128515</b> </h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<h5>(Your JSON will be generated automatically when you type something.)</h5>
+					</div>
+				</div>
+				<div class="row">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s6">
+								<input type="text" id="identifier" onkeyup="makeJSON()" />
+								<label for="identifier">Folder Name (Identifier)</label>
+							</div>
+							<div class="input-field col s6">
+								<input type="text" id="name" onkeyup="makeJSON()" />
+								<label for="name">Sticker Pack Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6">
+								<td> <input type="text" id="publisher" onkeyup="makeJSON()" />
+								<label for="name">Publisher</label>
+							</div>
+							<div class="input-field col s6">
+								<input type="text" id="tray_image_file" onkeyup="makeJSON()"/>
+								<label for="name">Tray Image File Name (with .png)</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6">
+								<input type="text" id="publisher_email" onkeyup="makeJSON()" />
+								<label for="name">Publisher Email</label>
+							</div>
+							<div class="input-field col s6">
+								<td> <input type="text" id="publisher_website" onkeyup="makeJSON()" />
+								<label for="name">Publisher Website</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6">
+								<input type="text" id="privacy_policy_website" onkeyup="makeJSON()" />
+								<label for="name">Privacy Policy URL</label>
+							</div>
+							<div class="input-field col s6">
+								<input type="text" id="license_agreement_website" onkeyup="makeJSON()"/>
+								<label for="name">Licence Agreement Website </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="file-field input-field col s6">
+								<div class="btn">
+									<span>Browse</span>
+									<input type="file" id="files" multiple accept=".webp" onchange="makeJSON()" />
+								</div>
+								<div class="file-path-wrapper">
+									<input class="file-path validate" type="text" placeholder="Upload file" />
+								</div>
+							</div>
+						</div>
 					</form>
-				</td>
-			<tr>	<td>&nbsp</td> </tr>
-			</tr>
-		</table>
-		<h2>Enter details and Get your Sticker Pack JSON Ready &#128515 &#128515 &#128515</h2>
-		<h5>(Your JSON will be display when you choose files.)</h5>
-		<table>
-			<tr>
-				<td> Enter Folder Name (Identifier) : </td>
-				<td> <input type="text" id="identifier" /> </td>
-			</tr>
-			<tr>
-				<td> Enter Sticker Pack Name : </td>
-				<td> <input type="text" id="name" />	</td>
-			</tr>
-			<tr>
-				<td> Enter Publisher : </td>
-				<td> <input type="text" id="publisher" /> </td>
-			</tr>
-			<tr>
-				<td> Enter Tray Image (with .png) : </td>
-				<td> <input type="text"  id="tray_image_file" /> </td>
-			</tr>
-			<tr>
-				<td> Enter Publisher Email : </td>
-				<td> <input type="text" id="publisher_email" /> </td>
-			</tr>
-			<tr>
-				<td> Enter Publisher Website : </td>
-				<td> <input type="text" id="publisher_website" /> </td>
-			</tr>
-			<tr>
-				<td> Enter Privacy Policy URL : </td>
-				<td> <input type="text" id="privacy_policy_website" /> </td>
-			</tr>
-			<tr>
-				<td> Enter Licence Agreement Website : </td>
-				<td> <input type="text" id="license_agreement_website" /> </td>
-			</tr>
-			<tr>
-				<td> Select Images (Only .webp) : </td>
-				<td> <input type="file" id="files" multiple accept=".webp" /> </td>
-			</tr>
-		</table>	
-		<br>
-		<br>
-	
-		<script>
+				</div>
+				<div class="progress">
+					<div>
+						<div class="determinate" style="width: 100%"></div>
+					</div>
+				</div>
+				<div class="btn" id="copyButtonClick" onclick="copyJSON()">
+					<span>Copy JSON</span>
+				</div>
+			<pre id='output'></pre>
+			<div class="progress">
+				<div>
+					<div class="determinate" style="width: 100%"></div>
+				</div>
+			</div>
+			<table>
+				<tr>
+					<td>
+						<h4 class="center-align" style="margin-top: 0"><b> No one has ever become poor by giving.&hearts;&hearts;&hearts;</b></h4>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="center-align">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="46Q5USNZNGKML">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script>
 
-			document.getElementById('files').addEventListener('change', function(e) {
-				jsonObj = [];
-				mainArray = {};
-				mainArray.android_play_store_link = "";
-				mainArray.ios_app_store_link = "";
-				
-				if (this.files.length>30){
-					 alert("You can only upload a maximum of 30 files");
-				} else {
-				    	for (var i = 0; i < this.files.length; i++) {
-					      	item = {};
-					      	item ["image_file"] = this.files[i].name;
-					      	item ["emoji"] = [];
-		
-					      	item ["emoji"].push("");
-					      	item ["emoji"].push("");
-		
-						jsonObj.push(item);
-	
-				   	}
-					mainArray["sticker_pack"] = [];
-					innerValue = {};
-					innerValue["identifier"] = document.getElementById('identifier').value;
-					innerValue["name"] = document.getElementById('name').value;
-					innerValue["publisher"] = document.getElementById('publisher').value;
-					innerValue["tray_image_file"] = document.getElementById('tray_image_file').value;
-					innerValue["publisher_email"] = document.getElementById('publisher_email').value;
-					innerValue["publisher_website"] = document.getElementById('publisher_website').value;
-					innerValue["privacy_policy_website"] = document.getElementById('privacy_policy_website').value;
-					innerValue["license_agreement_website"] = document.getElementById('license_agreement_website').value;
-					innerValue["stickers"] = [];
-					innerValue["stickers"].push(jsonObj);
-					mainArray["sticker_pack"].push(innerValue);
-					
-					
-					output(syntaxHighlight(JSON.stringify(mainArray, undefined, 4)));
-				}
-			});
-
-			function syntaxHighlight(json) {
-			    	json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-				return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-				var cls = 'number';
-				if (/^"/.test(match)) {
-				    if (/:$/.test(match)) {
+	function syntaxHighlight(json) {
+		json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+			var cls = 'number';
+			if (/^"/.test(match)) {
+				if (/:$/.test(match)) {
 					cls = 'key';
-				    } else {
+				} else {
 					cls = 'string';
-				    }
-				} else if (/true|false/.test(match)) {
-				    cls = 'boolean';
-				} else if (/null/.test(match)) {
-				    cls = 'null';
 				}
-				return '<span class="' + cls + '">' + match + '</span>';
-			    });
+			} else if (/true|false/.test(match)) {
+				cls = 'boolean';
+			} else if (/null/.test(match)) {
+				cls = 'null';
 			}
-
-			function output(inp) {
-			    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
+			return '<span class="' + cls + '">' + match + '</span>';
+		});
+	}
+	
+	function output(inp) {
+		document.getElementById('output').innerHTML = inp;
+	}
+	
+	function makeJSON() {
+		jsonObj = [];
+		mainArray = {};
+		mainArray.android_play_store_link = "";
+		mainArray.ios_app_store_link = "";
+		var fileObj = document.getElementById('files');
+		if (fileObj.files.length > 30) {
+			alert("You can only upload a maximum of 30 files");
+		} else {
+			for (var i = 0; i < fileObj.files.length; i++) {
+				item = {};
+				item["image_file"] = fileObj.files[i].name;
+				item["emoji"] = [];
+				item["emoji"].push("");
+				item["emoji"].push("");
+				jsonObj.push(item);
 			}
+		}
+		
+		mainArray["sticker_pack"] = [];
+		innerValue = {};
+		innerValue["identifier"] = document.getElementById('identifier').value;
+		innerValue["name"] = document.getElementById('name').value;
+		innerValue["publisher"] = document.getElementById('publisher').value;
+		innerValue["tray_image_file"] = document.getElementById('tray_image_file').value;
+		innerValue["publisher_email"] = document.getElementById('publisher_email').value;
+		innerValue["publisher_website"] = document.getElementById('publisher_website').value;
+		innerValue["privacy_policy_website"] = document.getElementById('privacy_policy_website').value;
+		innerValue["license_agreement_website"] = document.getElementById('license_agreement_website').value;
+		innerValue["stickers"] = [];
+		innerValue["stickers"].push(jsonObj);
+		mainArray["sticker_pack"].push(innerValue);
+		output(syntaxHighlight(JSON.stringify(mainArray, undefined, 4)));
+	}
+	
+	function copyJSON() {
+		const copyText = document.getElementById("output").textContent;
+		const textArea = document.createElement('textarea');
+		textArea.textContent = copyText;
+		document.body.append(textArea);
+		textArea.select();
+		document.execCommand("copy");
+		M.toast({html: 'JSON Copied Successfully. Enjoy!'})	
+	}
 
-		</script>
-	</body>	
+	//document.getElementById('files').addEventListener('change', makeJSON());
+	//document.getElementById('identifier').addEventListener('onkeyup', makeJSON());
+	//document.getElementById('license_agreement_website').addEventListener('onkeyup', makeJSON());
+	
+</script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
 </html>
