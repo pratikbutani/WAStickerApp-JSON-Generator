@@ -33,29 +33,27 @@ It will give full pack array in JSON.
             "privacy_policy_website": "your-url.com/privacy_policy.php",
             "license_agreement_website": "your-url.com/license.php",
             "stickers": [
-                [
-                    {
-                        "image_file": "banner.webp",
-                        "emoji": [
-                            "",
-                            ""
-                        ]
-                    },
-                    {
-                        "image_file": "bg_img.webp",
-                        "emoji": [
-                            "",
-                            ""
-                        ]
-                    },
-                    {
-                        "image_file": "ic_chef.webp",
-                        "emoji": [
-                            "",
-                            ""
-                        ]
-                    }
-                ]
+                {
+                    "image_file": "banner.webp",
+                    "emoji": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "image_file": "bg_img.webp",
+                    "emoji": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "image_file": "ic_chef.webp",
+                    "emoji": [
+                        "",
+                        ""
+                    ]
+                }
             ]
         }
     ]
