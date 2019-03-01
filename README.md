@@ -1,4 +1,6 @@
-# WAStickerApp-JSON-Generator
+<p align="center">
+<img alt="WAStickerApp-JSON-Generator" src=https://raw.githubusercontent.com/pratikbutani/WAStickerApp-JSON-Generator/master/JSON_Creator_WhatsAppSticker_Pack.png />
+</p>
 
 I have created script that will give you JSON of selected files.
 
