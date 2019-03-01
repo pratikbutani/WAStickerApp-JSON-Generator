@@ -2,11 +2,13 @@
 <img alt="WAStickerApp-JSON-Generator" src=https://raw.githubusercontent.com/pratikbutani/WAStickerApp-JSON-Generator/master/JSON_Creator_WhatsAppSticker_Pack.png />
 </p>
 
-I have created script that will give you JSON of selected files.
+We are creating many apps for WhatsApp Stickers after they have announced sticker features in Android and iOS App.
 
-[Convert Image names to JSON Array (WAStickerApp)](http://pratikbutani.com/wastickerapp/)
+I have also created some apps for [WhatsApp Stickers](https://play.google.com/store/apps/developer?id=WAStickers+Collection+Apps) but got some difficulties to create JSON for `content.json` file. Every developer faced this problem, Believe Me.
 
-That will allows you to:
+For that I have created tool [Convert Image names to JSON Array (WAStickerApp)](http://pratikbutani.com/wastickerapp/) which can help you to get JSON by giving details of Sticker Pack.
+
+You can upload following details:
 - Folder Name (Identifier)
 - Sticker Pack Name
 - Publisher
@@ -17,7 +19,7 @@ That will allows you to:
 - Licence Agreement Website
 - Images (Only .webp)
 
-It will give full pack array in JSON.
+It will give full array in JSON as below:
 
 **Format:**
 ```
@@ -62,7 +64,7 @@ It will give full pack array in JSON.
 }
 ```
 
-Hope it will helps.
+I hope you will love it.
 
 **No one has ever become poor by giving. <3 <3**
 
