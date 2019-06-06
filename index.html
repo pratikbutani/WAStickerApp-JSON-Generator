@@ -193,7 +193,7 @@
 			}
 		}
 		
-		mainArray["sticker_pack"] = [];
+		mainArray["sticker_packs"] = [];
 		innerValue = {};
 		innerValue["identifier"] = document.getElementById('identifier').value;
 		innerValue["name"] = document.getElementById('name').value;
@@ -205,7 +205,7 @@
 		innerValue["license_agreement_website"] = document.getElementById('license_agreement_website').value;
 		innerValue["stickers"] = [];
 		innerValue["stickers"] = jsonObj;
-		mainArray["sticker_pack"].push(innerValue);
+		mainArray["sticker_packs"].push(innerValue);
 		output(syntaxHighlight(JSON.stringify(mainArray, undefined, 4)));
 	}
 	
