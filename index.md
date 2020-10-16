@@ -1,37 +1,80 @@
-## Welcome to GitHub Pages
+# WAStickerApp-JSON-Generator
+A JSON Generator for WhatsApp Sticker Pack Apps.
 
-You can use the [editor on GitHub](https://github.com/pratikbutani/WAStickerApp-JSON-Generator/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<p align="center">
+<img alt="WAStickerApp-JSON-Generator" src=https://raw.githubusercontent.com/pratikbutani/WAStickerApp-JSON-Generator/master/JSON_Creator_WhatsAppSticker_Pack.png />
+</p>
 
-### Markdown
+We are creating many apps for WhatsApp Stickers after they have announced sticker features in Android and iOS App.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I have also created some apps for [WhatsApp Stickers](https://play.google.com/store/apps/developer?id=WAStickers+Collection+Apps) but got some difficulties to create JSON for `content.json` file. Every developer faced this problem, Believe Me.
 
-```markdown
-Syntax highlighted code block
+For that I have created tool [Convert Image names to JSON Array (WAStickerApp)](http://pratikbutani.com/wastickerapp/) which can help you to get JSON by giving details of Sticker Pack.
 
-# Header 1
-## Header 2
-### Header 3
+You can upload following details:
+- Folder Name (Identifier)
+- Sticker Pack Name
+- Publisher
+- Tray Image (with .png)
+- Publisher Email
+- Publisher Website
+- Privacy Policy URL
+- Licence Agreement Website
+- Images (Only .webp)
 
-- Bulleted
-- List
+It will give full array in JSON as below:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+**Format:**
+```
+{
+    "android_play_store_link": "",
+    "ios_app_store_link": "",
+    "sticker_pack": [
+        {
+            "identifier": "1",
+            "name": "My Sticker Pack",
+            "publisher": "Pratik Butani",
+            "tray_image_file": "placeholder.png",
+            "publisher_email": "pratik13butani@gmail.com",
+            "publisher_website": "pratikbutani.com",
+            "privacy_policy_website": "your-url.com/privacy_policy.php",
+            "license_agreement_website": "your-url.com/license.php",
+            "stickers": [
+                {
+                    "image_file": "banner.webp",
+                    "emoji": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "image_file": "bg_img.webp",
+                    "emoji": [
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "image_file": "ic_chef.webp",
+                    "emoji": [
+                        "",
+                        ""
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Read Full Article : [JSON Creator for WhatsApp Sticker Pack](https://medium.com/mindorks/json-creator-for-whatsapp-sticker-pack-1ffb2719f562)
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pratikbutani/WAStickerApp-JSON-Generator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+I hope you will love it.
 
-### Support or Contact
+**No one has ever become poor by giving. <3 <3**
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=46Q5USNZNGKML)
+
+Thank you.
