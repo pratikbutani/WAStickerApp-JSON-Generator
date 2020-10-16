@@ -1,10 +1,7 @@
 # WAStickerApp-JSON-Generator
 A JSON Generator for WhatsApp Sticker Pack Apps.
 
-
-<p align="center">
-<img alt="WAStickerApp-JSON-Generator" src=https://raw.githubusercontent.com/pratikbutani/WAStickerApp-JSON-Generator/master/JSON_Creator_WhatsAppSticker_Pack.png />
-</p>
+![WAStickerApp-JSON-Generator](https://raw.githubusercontent.com/pratikbutani/WAStickerApp-JSON-Generator/master/JSON_Creator_WhatsAppSticker_Pack.png)
 
 We are creating many apps for WhatsApp Stickers after they have announced sticker features in Android and iOS App.
 
