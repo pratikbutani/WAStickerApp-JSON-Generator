@@ -39,6 +39,12 @@
 			position: absolute;
 			left: -100%;
 		}
+		#avoid_cache{
+			opacity: 1;
+			pointer-events: all;
+			display: flex;
+
+		}
 		</style>
 	</head>
 	<body>
@@ -75,7 +81,7 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s6">
-								<td> <input type="text" id="publisher" onkeyup="makeJSON()" />
+								<input type="text" id="publisher" onkeyup="makeJSON()" />
 								<label for="name">Publisher</label>
 							</div>
 							<div class="input-field col s6">
@@ -85,11 +91,21 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s6">
+								<input type="text" id="image_data_version" onkeyup="makeJSON()" />
+								<label for="image_data_version">Version</label>
+							</div>
+							<div class="input-field col s6">
+								<label for="avoide_cache">Avoid cache <input type="checkbox" id="avoid_cache" onclick="makeJSON()"/></label>
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6">
 								<input type="text" id="publisher_email" onkeyup="makeJSON()" />
 								<label for="name">Publisher Email</label>
 							</div>
 							<div class="input-field col s6">
-								<td> <input type="text" id="publisher_website" onkeyup="makeJSON()" />
+								<input type="text" id="publisher_website" onkeyup="makeJSON()" />
 								<label for="name">Publisher Website</label>
 							</div>
 						</div>
@@ -199,6 +215,8 @@
 		innerValue["name"] = document.getElementById('name').value;
 		innerValue["publisher"] = document.getElementById('publisher').value;
 		innerValue["tray_image_file"] = document.getElementById('tray_image_file').value;
+		innerValue["image_data_version"] = document.getElementById('image_data_version').value;
+		innerValue["avoid_cache"] = document.getElementById('avoid_cache').checked;
 		innerValue["publisher_email"] = document.getElementById('publisher_email').value;
 		innerValue["publisher_website"] = document.getElementById('publisher_website').value;
 		innerValue["privacy_policy_website"] = document.getElementById('privacy_policy_website').value;
