@@ -27,12 +27,14 @@ It will give full array in JSON as below:
 {
     "android_play_store_link": "",
     "ios_app_store_link": "",
-    "sticker_pack": [
+    "sticker_packs": [
         {
             "identifier": "1",
             "name": "My Sticker Pack",
             "publisher": "Pratik Butani",
             "tray_image_file": "placeholder.png",
+            "image_data_version","1",
+            "avoid_cache":false
             "publisher_email": "pratik13butani@gmail.com",
             "publisher_website": "pratikbutani.com",
             "privacy_policy_website": "your-url.com/privacy_policy.php",
