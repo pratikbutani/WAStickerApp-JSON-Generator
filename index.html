@@ -39,12 +39,7 @@
 			position: absolute;
 			left: -100%;
 		}
-		#avoid_cache{
-			opacity: 1;
-			pointer-events: all;
-			display: flex;
-
-		}
+		
 		</style>
 	</head>
 	<body>
@@ -95,8 +90,10 @@
 								<label for="image_data_version">Version</label>
 							</div>
 							<div class="input-field col s6">
-								<label for="avoide_cache">Avoid cache <input type="checkbox" id="avoid_cache" onclick="makeJSON()"/></label>
-								
+								<label for="avoid_cache">
+									<input type="checkbox" class="filled-in" id="avoid_cache" onclick="makeJSON()"/>
+									<span>Avoid cache</span>
+								</label>
 							</div>
 						</div>
 						<div class="row">
