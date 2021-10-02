@@ -67,8 +67,7 @@ It will give full array in JSON as below:
 }
 ```
 
-Read Full Article : [JSON Creator for WhatsApp Sticker Pack](https://medium.com/mindorks/json-creator-for-whatsapp-sticker-pack-1ffb2719f562)
-
+You can read full article here : [JSON Creator for WhatsApp Sticker Pack](https://medium.com/mindorks/json-creator-for-whatsapp-sticker-pack-1ffb2719f562)
 
 I hope you will love it.
 
