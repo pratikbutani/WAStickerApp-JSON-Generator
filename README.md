@@ -7,7 +7,7 @@ We are creating many apps for WhatsApp Stickers after they have announced sticke
 
 I have also created some apps for [WhatsApp Stickers](https://play.google.com/store/apps/developer?id=WAStickers+Collection+Apps) but got some difficulties to create JSON for `content.json` file. Every developer faced this problem, Believe Me.
 
-For that I have created tool [Convert Image names to JSON Array (WAStickerApp)](http://pratikbutani.com/wastickerapp/) which can help you to get JSON by giving details of Sticker Pack.
+Here is the solution, I have created tool [Convert Image names to JSON Array (WAStickerApp)](http://pratikbutani.com/wastickerapp/) which can help you to get JSON by giving details of Sticker Pack.
 
 You can upload following details:
 - Folder Name (Identifier)
